@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../services/venteService.js" async></script>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <main class="container">
+        <div id="content"> 
+            <div class="center_action">
+              <h2>Gestion des ventes</h2>
+              <div class="action_btn">
+                <button class="btn_show" onclick="showModal_new()">Créez une vente</button>
+                <button class="btn_list" onclick="displayVentes()">liste des ventes</button>
+                <a href="../index.html" class="btn_deconnexion" onclick="logout()">Déconnexion</a>
+              </div>
+            </div>
+            
+            <div class="main_content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nom Client</th>
+                            <th>Nom Produit</th>
+                            <th>Prix</th>
+                            <th>Quantités</th>
+                            <th>Date</th>
+                            <th colspan="2">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="list_ventes">
+                        <!-- <tr>
+                            <td>2</td>
+                            <td>Jean</td>
+                            <td>Voiture</td>
+                            <td>3000000</td>
+                            <td>4</td>
+                            <td>25/01/2024</td>
+                            <td>
+                                <button id="edit">Edit</button>
+                                <button id="delete">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Jean</td>
+                            <td>Voiture</td>
+                            <td>3000000</td>
+                            <td>4</td>
+                            <td>25/01/2024</td>
+                            <td>
+                                <button id="edit">Edit</button>
+                                <button id="delete">Delete</button>
+                            </td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <dialog id="new_Dialog" class="dialog">
+            <form method="dialog">
+              <div class="form-group">
+                <label  for="name_customer" class="form-label">Nom Client</label>
+                <input type="text" class="form-input" required="" id="name_customer">
+              </div>
+              <div class="form-group">
+                <label  for="name_product" class="form-label">Nom Produit</label>
+                <input type="text" class="form-input" required="" id="name_product">
+              </div>
+
+              <div class="form-group">
+                <label  for="quantities" class="form-label">Quantités</label>
+                <input type="number" class="form-input" required="" id="quantities">
+              </div>
+
+              <div class="form-group">
+                <label  for="price" class="form-label">Prix</label>
+                <input type="number" class="form-input" required="" id="price">
+              </div>
+
+              <div class="form-group">
+                <label  for="date" class="form-label">Date</label>
+                <input type="date" class="form-input" required="" id="date">
+              </div>
+
+              <div class="form-group-btn_2">
+                <button type="submit" class="btn btn-primary" id="create" onclick="addVente()">Créer</button>
+                <button class="btn btn-primary" id="create" onclick="modal_close()">Anuller</button>
+              </div>
+            </form>
+        </dialog>
+
+        <dialog id="edit_Dialog" class="dialog">
+            <form method="dialog">
+              <input hidden id="venteId_edit">
+              <div class="form-group">
+                <label  for="name_customer" class="form-label">Nom Client</label>
+                <input type="text" class="form-input" required="" id="name_customer_edit">
+              </div>
+              <div class="form-group">
+                <label  for="name_product" class="form-label">Nom Produit</label>
+                <input type="text" class="form-input" required="" id="name_product_edit">
+              </div>
+
+              <div class="form-group">
+                <label  for="quantities" class="form-label">Quantités</label>
+                <input type="number" class="form-input" required="" id="quantities_edit">
+              </div>
+
+              <div class="form-group">
+                <label  for="price" class="form-label">Prix</label>
+                <input type="number" class="form-input" required="" id="price_edit">
+              </div>
+
+              <div class="form-group">
+                <label  for="date" class="form-label">Date</label>
+                <input type="date" class="form-input" required="" id="date_edit">
+              </div>
+
+              <div class="form-group-btn">
+                <button type="submit" class="btn btn-primary" id="create" onclick="updateVente()">Modifier</button>
+              </div>
+
+            </form>
+        </dialog>
+    </main>
+</body>
+</html>

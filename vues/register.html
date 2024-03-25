@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../services/register.js" async></script>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+
+    <main class="container">
+        <form class="register">
+            <!-- <div class="accueil">
+                <a href="../index.html" >Accueil</a>
+            </div> -->
+            <div class="create_vente">
+                <span>Créer votre compte</span>
+            </div>
+            <div class="form-control">
+                <label for="name" class="form_label">Entrez votre nom</label>
+                <input type="text" id="name" required class="form_input" placeholder="Entrer votre nom">
+            </div>
+            <div class="form-control">
+                <label for="email" class="form_label">Entrez votre email</label>
+                <input type="email" id="email" required class="form_input" placeholder="Entrer votre email">
+            </div>
+            <div class="form-control">
+                <label for="password" class="form_label">Entrez votre mot de passe</label>
+                <input type="password" id="password" required class="form_input" placeholder="Entrer votre mot de passe">
+            </div>
+            <div class="form-control-btn">
+                <a href="./vente.html" class="btn" onclick="enregistrer(event)">Créer votre compte</a>
+            </div>
+        </form>
+    </main>
+   
+</body>
+</html>

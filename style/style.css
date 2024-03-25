@@ -1,0 +1,246 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif,'Argentum Sans', 'Montserrat', 'Protest Strike';
+}
+
+
+body{
+    background: #87e8e7;
+}
+
+.none{
+    display: none;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    margin-left: 50%;
+    transform: translate(-50%,-50%);
+    /*overflow:auto;*/
+    
+}
+
+.create_vente, .login_connexion{
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-style: initial;
+}
+
+.register, #login{
+    width: 400px;
+    background-image: linear-gradient(to right, #cf4017 ,#389793, #389793);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form-control, .form-group{
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form_label, .dialog .form-label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form_input, .dialog .form-input{
+    width: 100%;
+    padding: 15px;
+    border: 0;
+    outline: 0;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.dialog .form-input{
+    background: #389793;
+}
+
+.form-control-btn{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.dialog .form-group-btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-control-btn button,
+.dialog .form-group-btn button,
+.btn_show,
+.btn_deconnexion,
+#edit,#delete,.btn_list{
+    border: 0;
+    outline: 0;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: white;
+}
+
+#delete{
+    background: red;
+    margin-left: 5px;
+}
+
+#edit{
+    background: orange;
+}
+
+.btn_show{
+    background: green;
+}
+
+.btn_list{
+    background: orange;
+}
+
+.form-control-btn a, .dialog .form-group-btn a{
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 10px;
+    background: white;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.dialog .form-group-btn button,
+.dialog .form-group-btn a
+{
+    background: orange;
+}
+
+.dialog{
+    position: absolute;
+    top: 50%;
+    margin-left: 50%;
+    transform: translate(-50%,-50%);
+    background-clip:padding-box;
+    background-color:#FFFFFF;
+    border:1px solid #a9b7c2;
+    border-radius:4px 4px 4px 4px;
+    box-shadow:0 0 20px rgba(0,0,0,0.2);
+    outline:medium none;
+    padding: 20px;
+    width: 400px;
+}
+
+.main_content{
+    width: 100%;
+    overflow: auto;
+}
+
+table{
+    width: 1000px;
+    margin-top: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+thead th{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+tbody td{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.action_btn{
+    margin-top: 20px;
+}
+
+.action_btn a{
+    text-decoration: none;
+    color: black;
+}
+
+.accueil{
+    padding: 12px;
+    background: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.accueil a{
+    width: 100%;
+    text-decoration: none;
+}
+
+#login .title{
+    padding-bottom: 30px;
+    width: 100%;
+}
+
+.action_btn{
+    display: flex;
+    align-items:flex-start;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.form-group-btn_2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.form-group-btn_2 button{
+    border: 0;
+    outline: 0;
+    padding: 15px;
+    font-size: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: orange;
+}
+
+/****************** Mobile *******************/
+
+@media (max-width:1040px){
+    .container{
+        width: 90%;
+    }
+
+    .register, #login{
+      margin-left: 50%;
+      transform: translateX(-50%);
+    }
+}
+
+@media (max-width:890px){
+    .container{
+        width: 95%;
+    }
+
+    .register, #login{
+      margin-left: 50%;
+      transform: translateX(-50%);
+    }
+}
+
+@media (max-width:809px){
+    .register, #login{
+      margin-left: 40%;
+      transform: translateX(-40%);
+      width: 90%;
+    }
+    .btn{
+        width: 100%;
+        text-align: center;
+    }
+}
