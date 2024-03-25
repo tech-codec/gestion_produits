@@ -1,4 +1,4 @@
-# gestion_produits
+# gestion de vente des produits
 
 c'est une application de gestion de vente d'un produit avec système d'authentification fait avec les technologies tels que HTML, CSS et JavaScript qui utilse les systèmes de stockage des navigateurs tels que:
 * Le localstorage: pour la création des comptes utilisateurs
